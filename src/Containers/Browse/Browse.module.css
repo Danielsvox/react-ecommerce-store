@@ -23,6 +23,8 @@ body {
     width: 100vw;
     padding-bottom: 280px;
     background-color: #0f1011;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .filters {
@@ -146,6 +148,16 @@ body {
     .list h1 {
         font-size: 40px;
     }
+
+    .browseContent {
+        flex-direction: column;
+        padding-bottom: 200px;
+    }
+
+    .filters {
+        width: 100%;
+        padding: 20px 20px 0px 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -175,4 +187,3 @@ body {
         font-size: 12px;
     }
 }
-

@@ -2,14 +2,14 @@ const filterNames = [
     "Wishlist",
     "Ratings",
     "Reviews",
-    "Action",
-    "Strategy",
-    "RPG",
-    "Shooter",
-    "Adventure",
-    "Puzzle",
-    "Racing",
-    "Sports"
+    "High Grade",
+    "Master Grade",
+    "Perfect Grade",
+    "Real Grade",
+    "Full Mechanics",
+    "Ver.Ka",
+    "1/144 Scale",
+    "1/100 Scale"
 ];
 
 export default filterNames;

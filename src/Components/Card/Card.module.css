@@ -5,7 +5,12 @@
     border-radius: 12px;
     transition: 0.3s all;
     position: relative;
-    padding-bottom: 56.25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
 }
 
 .cardHome {
@@ -220,7 +225,10 @@
 .card img {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -233,6 +241,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 6px 15px 3px 7px;
+    flex-shrink: 0;
 }
 
 .tombraider .name {
@@ -241,10 +250,36 @@
 
 .name {
     color: white;
-    padding-left: 14px;
+    padding: 10px 14px 40px 14px;
     font-family: "GT Bold";
-    padding-bottom: 40px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: calc(100% - 28px);
+    flex-grow: 1;
+    margin: 0;
+    position: relative;
+}
+
+.name:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: pre;
+    z-index: 10;
+    font-size: 14px;
+    font-family: "GT Regular";
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .name,
@@ -285,56 +320,44 @@
     transform: scale(1.25);
 }
 
-@media screen and (max-width: 1700px) {
-    .name {
-        padding-right: 20px;
-    }
-}
-
 @media screen and (max-width: 1240px) {
     .name {
-        font-size: 30px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 975px) {
     .name {
-        font-size: 25px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 840px) {
     .name {
-        font-size: 22px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 770px) {
     .name {
-        font-size: 30px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .name {
-        font-size: 40px;
-    }
-
-    .card img {
-        width: 100%;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 475px) {
     .name {
-        font-size: 34px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 375px) {
     .name {
-        font-size: 26px;
+        font-size: 14px;
     }
 }
-
-
